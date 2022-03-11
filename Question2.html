@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number of times a character occur</title>
+  </head>
+
+  <body>
+    <script>
+      function findFreq(str, char) {
+        let count = 0;
+        let string = str.toLowerCase();
+        for (let i = 0; i < string.length; i++) {
+          if (string[i] == char) {
+            count += 1;
+          }
+        }
+        console.log(` ${char} occurs ${count} times in the string '${str}'.`);
+      }
+      findFreq(
+        'How many times does the character occur in this sentence?',
+        'm'
+      );
+      findFreq(
+        'How many times does the character occur in this sentence?',
+        'h'
+      );
+      console.log(
+        '--------------------Second Question Starts from here ------------------------'
+      );
+      //second question
+      function areAllEqual(arr) {
+        let flag = 1;
+        for (let i = 1; i < arr.length; i++) {
+          if (arr[0] != arr[i]) {
+            flag = 0;
+            break;
+          }
+        }
+        if (flag) {
+          console.log('true');
+        } else {
+          console.log('false');
+        }
+      }
+      areAllEqual(['test', 'test', 'test']);
+      areAllEqual([1, 1, 1, 2]);
+      console.log(
+        '--------------------Third Question Starts from here ------------------------'
+      );
+      //third question
+      function subArray(arr, n) {
+        let result = [];
+        if (arr.length >= n) {
+          for (let i = arr.length - n; i < arr.length; i++) {
+            let b = arr[i];
+            result.push(b);
+          }
+          console.log(`[${result}]`);
+        } else {
+          console.log(`[${arr}]`);
+        }
+      }
+      subArray([1, 2, 3, 4, 5], 2);
+      subArray([1, 2, 3], 6);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<html>
+  <head> </head>
+  <body>
+    <script>
+      const numbersArray = ['apple', 'orange', 'peach'];
+      let [a, b, c] = numbersArray;
+      console.log(a);
+      console.log(c);
+      //first question second part
+      const person = {
+        name: 'abcde',
+        age: 10,
+        gender: 'm',
+      };
+      var name = person.name;
+      var age = person.age;
+      console.log(`object destructure name is ${name}`);
+      console.log(`object destructure age is ${age}`);
+      //second question
+      console.log(
+        '--------------------Second Question Starts from here ------------------------'
+      );
+      const array1 = [1, 2, 3];
+      const array2 = [4, 5, 6];
+      var array3 = array1.concat(array2);
+      console.log(`Array 3 is ${array3}`);
+      //second question part2
+      console.log(
+        '----------Second Question second part Starts from here -----------'
+      );
+      const basicDetails = {
+        name: 'abcde',
+        age: 10,
+        gender: 'm',
+      };
+      const educationDetails = {
+        degree: 'xyz',
+        college: 'anc',
+      };
+      let student = {
+        ...basicDetails,
+        ...educationDetails,
+      };
+      console.log(student);
+      //third question
+      console.log(
+        '--------------------Third Question Starts from here ------------------------'
+      );
+      function largestNumber(numArray) {
+        let max = -Infinity;
+        for (var i = 0; i < numArray.length; ++i) {
+          if (numArray[i] < max) continue;
+          if (numArray[i] > max) {
+            max = numArray[i];
+          }
+        }
+        console.log(`The maximum value is ${max}`);
+        return max;
+      }
+      numArray = [1, 5, 7, 9];
+      largestNumber(numArray);
+      numArray = [-1, -5, 0, -100];
+      largestNumber(numArray);
+      //fourth question
+      console.log(
+        '--------------------Fourth Question Starts from here ------------------------'
+      );
+      employeesArray = [100, 500, 700, 400];
+      percent = 10;
+      updateSalaries(employeesArray, percent);
+      function updateSalaries(employeesArray, percent) {
+        for (var i = 0; i < employeesArray.length; ++i) {
+          employeesArray[i] = employeesArray[i] + employeesArray[i] / percent;
+        }
+        console.log(employeesArray);
+        return employeesArray;
+      }
+    </script>
+  </body>
+</html>
